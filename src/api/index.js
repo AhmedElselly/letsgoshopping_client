@@ -1,1 +1,1 @@
-export const url = 'https://letsgoshopping-backend.onrender.com'
+export const api = 'https://letsgoshopping-backend.onrender.com'
