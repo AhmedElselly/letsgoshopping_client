@@ -1,5 +1,6 @@
+import {api} from '../api';
 export const createCategory = (userId, token, category) => {
-    return fetch(`https://mern-ecommerce-server.herokuapp.com/api/category/create/${userId}`, {
+    return fetch(`${api}/api/category/create/${userId}`, {
         method: 'POST',
         headers: {
             Accept: 'application/json',
@@ -16,7 +17,7 @@ export const createCategory = (userId, token, category) => {
 }
 
 export const createProduct = (userId, token, product) => {
-    return fetch(`https://mern-ecommerce-server.herokuapp.com/api/product/create/${userId}`, {
+    return fetch(`${api}/api/product/create/${userId}`, {
         method: 'POST',
         headers: {
             Accept: 'application/json',
@@ -32,7 +33,7 @@ export const createProduct = (userId, token, product) => {
 }
 
 export const getCategories = () => {
-    return fetch(`https://mern-ecommerce-server.herokuapp.com/api/categories`, {
+    return fetch(`${api}/api/categories`, {
         method: 'GET'
     }).then(response => {
         return response.json();
@@ -42,7 +43,7 @@ export const getCategories = () => {
 }
 
 export const listOrders = (userId, token) => {
-    return fetch(`https://mern-ecommerce-server.herokuapp.com/api/order/list/${userId}`, {
+    return fetch(`${api}/api/order/list/${userId}`, {
         method: 'GET',
         headers: {
             Accept: 'application/json',
@@ -56,7 +57,7 @@ export const listOrders = (userId, token) => {
 }
 
 export const getStatusValues = (userId, token) => {
-    return fetch(`https://mern-ecommerce-server.herokuapp.com/api/order/status-values/${userId}`, {
+    return fetch(`${api}/api/order/status-values/${userId}`, {
         method: 'GET',
         headers: {
             Accept: 'application/json',
@@ -70,7 +71,7 @@ export const getStatusValues = (userId, token) => {
 }
 
 export const updateOrderStatus = (userId, token, orderId, status) => {
-    return fetch(`https://mern-ecommerce-server.herokuapp.com/api/order/${orderId}/status/${userId}`, {
+    return fetch(`${api}/api/order/${orderId}/status/${userId}`, {
         method: 'PUT',
         headers: {
             Accept: 'application/json',
@@ -94,7 +95,7 @@ export const updateOrderStatus = (userId, token, orderId, status) => {
  */
 
 export const getProducts = () => {
-    return fetch(`https://mern-ecommerce-server.herokuapp.com/api/products?limit=undefined`, {
+    return fetch(`${api}/api/products?limit=undefined`, {
         method: 'GET'
     }).then(response => {
         return response.json();
@@ -104,7 +105,7 @@ export const getProducts = () => {
 }
 
 export const deleteProduct = (productId, userId, token) => {
-    return fetch(`https://mern-ecommerce-server.herokuapp.com/api/product/${productId}/${userId}`, {
+    return fetch(`${api}/api/product/${productId}/${userId}`, {
         method: 'DELETE',
         headers: {
             Accept: 'application/json',
@@ -119,7 +120,7 @@ export const deleteProduct = (productId, userId, token) => {
 }
 
 export const getProduct = (productId) => {
-    return fetch(`https://mern-ecommerce-server.herokuapp.com/api/product/${productId}`, {
+    return fetch(`${api}/api/product/${productId}`, {
         method: 'GET'
     }).then(response => {
         return response.json();
@@ -129,7 +130,7 @@ export const getProduct = (productId) => {
 }
 
 export const updateProduct = (productId, userId, token, product) => {
-    return fetch(`https://mern-ecommerce-server.herokuapp.com/api/product/${productId}/${userId}`, {
+    return fetch(`${api}/api/product/${productId}/${userId}`, {
         method: 'PUT',
         headers: {
             Accept: 'application/json',

@@ -1,5 +1,7 @@
+import {api} from '../api';
+
 export const read = (userId, token) => {
-    return fetch(`https://mern-ecommerce-server.herokuapp.com/api/user/${userId}`, {
+    return fetch(`${api}/api/user/${userId}`, {
         method: 'GET',
         headers: {
             Accept: 'application/json',
@@ -14,7 +16,7 @@ export const read = (userId, token) => {
 }
 
 export const update = (userId, token, user) => {
-    return fetch(`https://mern-ecommerce-server.herokuapp.com/api/user/${userId}`, {
+    return fetch(`${api}/api/user/${userId}`, {
         method: 'PUT',
         headers: {
             Accept: 'application/json',
@@ -31,7 +33,7 @@ export const update = (userId, token, user) => {
 }
 
 export const getPurchaseHistory = (userId, token) => {
-    return fetch(`https://mern-ecommerce-server.herokuapp.com/api/orders/by/user/${userId}`, {
+    return fetch(`${api}/api/orders/by/user/${userId}`, {
         method: 'GET',
         headers: {
             Accept: 'application/json',
